@@ -1,50 +1,81 @@
-# Welcome to your Expo app 👋
+# Leitor de QR Code em React Native (Expo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este é um aplicativo de leitura de QR code desenvolvido com React Native e Expo. O aplicativo utiliza a câmera do dispositivo para escanear QR codes e, caso o conteúdo seja um link, o abre automaticamente no navegador.
 
-## Get started
+## ✨ Funcionalidades
 
-1. Install dependencies
+* **Leitura Automática:** Aponte a câmera para um QR code e o aplicativo fará a leitura automaticamente, sem a necessidade de pressionar botões.
+* **Abertura de Links:** Se o QR code contiver um link (URL), o aplicativo o abrirá diretamente no navegador padrão do seu dispositivo.
+* **Feedback Tátil e Sonoro:** Ao detectar um QR code, o aplicativo emite um som de "beep" e vibra, proporcionando um feedback claro ao usuário.
+* **Animação de Leitura:** Uma linha de varredura animada fornece um feedback visual durante o processo de leitura.
+* **Interface Limpa:** A interface é simples e intuitiva, focada na experiência do usuário.
 
-   ```bash
-   npm install
-   ```
+## 🚀 Tecnologias Utilizadas
 
-2. Start the app
+Este projeto foi construído com as seguintes tecnologias:
 
-   ```bash
-   npx expo start
-   ```
+* **React Native:** Framework para desenvolvimento de aplicativos móveis multiplataforma.
+* **Expo:** Plataforma e conjunto de ferramentas para construir, implantar e iterar rapidamente em aplicativos React Native.
+* **Expo Camera:** Módulo para acessar a câmera do dispositivo e escanear códigos de barras e QR codes.
+* **Expo AV:** Módulo para reprodução de áudio.
+* **Expo Haptics:** Módulo para controle do feedback tátil (vibração).
+* **React Native Reanimated:** Biblioteca para criar animações suaves e fluidas.
+* **TypeScript:** Superset do JavaScript que adiciona tipagem estática ao código.
 
-In the output, you'll find options to open the app in a
+## 🏁 Como Começar
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Siga as instruções abaixo para executar o projeto em seu ambiente de desenvolvimento.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Pré-requisitos
 
-## Get a fresh project
+* Node.js (versão 18 ou superior)
+* npm ou Yarn
+* Dispositivo físico com o aplicativo Expo Go instalado ou um emulador/simulador Android/iOS.
 
-When you're ready, run:
+### Instalação
 
-```bash
-npm run reset-project
-```
+1.  **Clone o repositório:**
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+    ```cmd
+    git clone [https://github.com/Ligia-Costa/qrCode.git]
+    ```
 
-## Learn more
+2.  **Acesse a pasta do projeto:**
 
-To learn more about developing your project with Expo, look at the following resources:
+    ```cmd
+    cd qrCode
+    ```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+3.  **Instale as dependências:**
 
-## Join the community
+    ```cmd
+    npm install
+    ```
 
-Join our community of developers creating universal apps.
+### Executando o Aplicativo
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1.  **Inicie o servidor de desenvolvimento do Expo:**
+
+    ```cmd
+    npm start
+    ```
+
+2.  **Abra o aplicativo:**
+    * **No seu dispositivo:** Escaneie o QR code exibido no terminal com o aplicativo Expo Go.
+    * **No emulador/simulador:** Pressione `a` para o Android ou `i` para o iOS no terminal onde o servidor do Expo está rodando.
+
+## 📝 Estrutura do Projeto
+
+* `app/index.tsx`: Arquivo principal que contém toda a lógica do leitor de QR code.
+* `app/_layout.tsx`: Layout principal do aplicativo, utilizando o `expo-router`.
+* `assets/`: Pasta para armazenar imagens, fontes e outros recursos estáticos.
+* `package.json`: Arquivo que lista as dependências e scripts do projeto.
+* `app.json`: Arquivo de configuração do Expo, onde são definidas as propriedades do aplicativo.
+
+## 🤝 Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para entrar em contato.
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
