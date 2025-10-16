@@ -44,7 +44,7 @@ export default function QRReader() {
   async function playBeep() {
     try {
       const { sound } = await Audio.Sound.createAsync(
-        require("./beep.mp3") // coloque um som curto "beep.mp3" na mesma pasta
+        require("./sucesso.mp3")
       );
       setSound(sound);
       await sound.playAsync();
